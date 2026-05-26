@@ -42,9 +42,9 @@ while True:
     print("|  4. Tìm kiếm và thay thế từ khóa trong mô tả |")
     print("|  5. Thoát chương trình                       |")
     print("+==============================================+")
-    choice = int(input("> Mời bạn chọn chức năng (1-5): ").strip())
+    choice = input("> Mời bạn chọn chức năng (1-5): ").strip()
     match choice:
-        case 1:
+        case '1':
             raw_username = input("Nhập tên tài khoản: ")
             raw_title = input("Nhập tiêu đề video: ")
             raw_description = input("Nhập mô tả video: ")
@@ -78,7 +78,7 @@ while True:
             print(f"- Mô tả dạng chữ hoa: {description.upper()}")
             print("+==============================================+")
             
-        case 2:
+        case '2':
             if not username:
                 print("Cảnh báo: Vui lòng thực hiện Chức năng 1 để nhập dữ liệu trước.")
                 continue
@@ -88,7 +88,7 @@ while True:
             print(f"- Tên tài khoản sau chuẩn hóa: {normalized_username}")
             print("+==============================================+")
             
-        case 3:
+        case '3':
             if not username:
                 print("Cảnh báo: Vui lòng thực hiện Chức năng 1 trước khi quản lý hashtag.")
                 continue
@@ -111,7 +111,7 @@ while True:
                     hashtags_list.append(test_hashtag)
                     print(f"-> Đã thêm vào danh sách thành công. Danh sách hiện tại: {hashtags_list}")
                     
-        case 4:
+        case '4':
             if not description:
                 print("Cảnh báo: Vui lòng thực hiện Chức năng 1 để nhập mô tả video trước.")
                 continue
@@ -127,7 +127,7 @@ while True:
             else:
                 print(f"Thông báo: Không tìm thấy từ khóa '{search_keyword}' trong mô tả.")
                 
-        case 5:
+        case '5':
             print("Thoát chương trình")
             break
         case _:
